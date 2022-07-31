@@ -1,7 +1,5 @@
 <template>
-    <DefaultLayout>
-        <router-view/>
-    </DefaultLayout>
+    <DefaultLayout />
 </template>
 
 <script>
@@ -44,6 +42,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     position: relative;
     font-size: 13px;
-    line-height: 1.8;
+    font-weight: 400;
+    /*line-height: 1.8;*/
 }
 </style>
