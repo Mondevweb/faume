@@ -12,6 +12,21 @@
             </div>
             <div class="faume_header_nav_right">
                 <img src="../assets/images/icon-cart.svg" alt="Cart" data-bs-toggle="cartDialog" data-bs-target="#cartDialog" @click="openDialog" />
+
+                <teleport to="body">
+                    <div id="cartDialog" class="modal fade" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body faume_modal_text">
+                                    <p>Il n'y a aucun produit dans le panier.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </teleport>
             </div>
         </div>
 
@@ -24,6 +39,7 @@
 
 <script>
 import DiscoverButton from './elements/DiscoverButton.vue';
+import { Modal } from 'bootstrap';
 
 export default {
     name: "HeaderComponent",
@@ -41,11 +57,13 @@ export default {
         window.addEventListener("scroll", () => {
             this.isSticky = window.scrollY > 5;
         });
+
+        this.cartModal = new Modal(document.getElementById('cartDialog'));
     },
 
     methods: {
         openDialog() {
-            this.$emit('showCartDialog');
+            this.cartModal.show();
         }
     }
 }
@@ -143,5 +161,11 @@ a {
     &:hover {
         color: unset;
     }
+}
+
+.faume_modal_text {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
 }
 </style>
