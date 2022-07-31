@@ -89,6 +89,10 @@ export default {
             flex-direction: column;
             justify-content: center;
 
+            @media(max-width: $breakpoint-xs) {
+                display: none;
+            }
+
             img {
                 height: 35px;
                 filter: $svg-filter-white;

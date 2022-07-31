@@ -3,7 +3,7 @@
         <div class="carousel-inner">
             <div v-for="(product, index) in selection" :key="product.id" class="carousel-item" :class="{active: index === 0}">
                 <img :src="product.image" class="d-block w-100" :alt="product.title">
-                <div class="carousel-caption d-md-block" style="background-color: grey; opacity: 0.7; padding: 10px">
+                <div class="carousel-caption d-md-block faume_main_selection_carousel_text">
                     <h4 class="faume_main_selection_carousel_description">{{ product.title }}</h4>
                     <span>{{ product.price }}</span>
                 </div>
@@ -34,10 +34,16 @@ export default {
 @import '@/assets/scss/variables';
 
 .faume_main_selection_carousel {
-    width: 500px;
+    max-width: 300px;
+
+    .faume_main_selection_carousel_text {
+        background-color: grey;
+        opacity: 0.7;
+        padding: 10px
+    }
 
     .faume_main_selection_carousel_description {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: $title-weight;
     }
 }
