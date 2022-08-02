@@ -80,7 +80,7 @@ export default {
     background-size: cover;
     position: relative;
 
-    .faume_header_nav {
+    &_nav {
         padding: 5px 15px;
         width: 100%;
         position: fixed;
@@ -92,7 +92,7 @@ export default {
         color: white;
         z-index: 99;
 
-        .faume_header_nav_left {
+        &_left {
             flex: 1;
             display: flex;
             flex-direction: row;
@@ -101,7 +101,7 @@ export default {
             font-weight: $title-weight;
         }
 
-        .faume_header_nav_center {
+        &_center {
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -117,7 +117,7 @@ export default {
             }
         }
 
-        .faume_header_nav_right {
+        &_right {
             flex: 1;
             text-align: right;
 
@@ -141,7 +141,7 @@ export default {
         align-items: center;
         gap: 20px;
 
-        .faume_header_femme_title {
+        &_title {
             font-size: 80px;
             font-weight: $title-weight;
         }

@@ -24,7 +24,7 @@ export default {
     justify-content: center;
     align-items: center;
 
-    .faume_footer_nav {
+    &_nav {
         display: flex;
         gap: 60px;
     }

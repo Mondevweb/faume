@@ -36,13 +36,13 @@ export default {
 .faume_main_selection_carousel {
     max-width: 300px;
 
-    .faume_main_selection_carousel_text {
+    &_text {
         background-color: grey;
         opacity: 0.7;
         padding: 10px
     }
 
-    .faume_main_selection_carousel_description {
+    &_description {
         font-size: 14px;
         font-weight: $title-weight;
     }

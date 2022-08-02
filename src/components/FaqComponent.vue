@@ -59,19 +59,19 @@ export default {
 .faume_faq {
     padding: 50px 20px;
 
-    .faume_faq_title {
+    &_title {
         text-align: center;
         font-size: 24px;
         font-weight: $title-weight;
     }
 
-    .faume_faq_question {
+    &_question {
         font-size: 18px;
         font-weight: $title-weight;
         cursor: pointer;
     }
 
-    .faume_faq_answer {
+    &_answer {
         margin-bottom: 25px;
     }
 }

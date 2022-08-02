@@ -114,7 +114,7 @@ export default {
         padding: $horizontal-gap 50px;
     }
 
-    .faume_main_text_title {
+    &_title {
         font-size: 24px;
         font-weight: $title-weight;
         text-transform: uppercase;
@@ -126,7 +126,7 @@ export default {
     flex-direction: row;
     gap: 2px;
 
-    .faume_main_collection_img {
+    &_img {
         @include two-squares;
         color: white;
         font-size: 16px;
@@ -141,13 +141,13 @@ export default {
 .faume_main_selection {
     margin: $horizontal-gap 12px;
 
-    .faume_main_selection_title {
+    &_title {
         margin-bottom: 20px;
         font-size: 16px;
         font-weight: $title-weight;
     }
 
-    .faume_main_selection_products {
+    &_products {
         display: flex;
         flex-direction: row;
         gap: 5px;
@@ -159,16 +159,16 @@ export default {
         .faume_main_selection_product {
             flex: 1;
 
-            .faume_main_selection_product_img {
+            &_img {
                 aspect-ratio: 4/5;
             }
 
-            .faume_main_selection_product_description {
+            &_description {
                 margin-top: 5px;
                 display: flex;
                 flex-direction: column;
 
-                .faume_main_selection_product_description_title {
+                &_title {
                     font-weight: $title-weight;
                 }
             }
@@ -190,11 +190,11 @@ export default {
     display: flex;
     flex-direction: row;
 
-    .faume_main_shop_img {
+    &_img {
         @include two-squares;
     }
 
-    .faume_main_shop_discover {
+    &_discover {
         background-color: #ced4da;
         display: flex;
         flex-direction: row;
